@@ -1,3 +1,12 @@
+# ink well
+
+A site about a daily ritual practice where we draw our shadow into the light.
+
+- Built with SvelteKit, Skeleton UI, and Tailwind CSS.
+- Deployed on Vercel
+
+---
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
