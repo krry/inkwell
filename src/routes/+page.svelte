@@ -5,23 +5,23 @@
 <div
 	class="grid grid-flow-row md:grid-cols-2 md:grid-rows-2 grid-rows-4 gap-8 lg:gap-16 relative text-center lg:mt-8"
 >
-	<div class="quadrant-card air">
-		<h2 class="quadrant-prompt unstyled">Free what's stuck</h2>
+	<div class="quadrant-card card card-hover air">
+		<h2 class="quadrant-prompt card-header unstyled">Free what's stuck</h2>
 		<div class="text-4xl badge-icon self-center -scale-x-100 mt-4">🌬️</div>
 		<p class="p-4">Write the word that is stuck in your mind. Leave it behind, adorned.</p>
 	</div>
-	<div class="quadrant-card water">
-		<h2 class="quadrant-prompt unstyled">Face your feels</h2>
+	<div class="quadrant-card card card-hover water">
+		<h2 class="quadrant-prompt card-header unstyled">Face your feels</h2>
 		<div class="text-4xl badge-icon self-center">🌊</div>
 		<p class="p-4">Draw a face that feels like you feel.</p>
 	</div>
-	<div class="quadrant-card earth">
-		<h2 class="quadrant-prompt unstyled">Greet your need</h2>
+	<div class="quadrant-card card card-hover earth">
+		<h2 class="quadrant-prompt card-header unstyled">Greet your need</h2>
 		<div class="text-4xl badge-icon self-center">🕳️</div>
 		<p class="p-4">Draw the empty shape of your unmet need. Then fill it in.</p>
 	</div>
-	<div class="quadrant-card fire">
-		<h2 class="quadrant-prompt unstyled">Burn your burden</h2>
+	<div class="quadrant-card card card-hover fire">
+		<h2 class="quadrant-prompt card-header unstyled">Burn your burden</h2>
 		<div class="text-4xl badge-icon self-center mt-4">🔥</div>
 		<p class="p-4">Draw whatever is weighing you down … on fire.</p>
 	</div>
