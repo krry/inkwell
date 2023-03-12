@@ -2,16 +2,7 @@
 	import '@skeletonlabs/skeleton/themes/theme-modern.css';
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
-	import {
-		AppShell,
-		AppBar,
-		autoModeWatcher,
-		Drawer,
-		drawerStore,
-		localStorageStore,
-		LightSwitch,
-		modalStore
-	} from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, autoModeWatcher, Drawer, drawerStore } from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/Navigation.svelte';
 	import InkBottle from '$lib/InkBottle.svelte';
 
@@ -23,7 +14,7 @@
 <svelte:head>
 	{@html `<script>${autoModeWatcher.toString()} autoModeWatcher();</script>`}
 </svelte:head>
-<Drawer rounded="rounded-bl-full" width="w-64" position={'right'}>
+<Drawer rounded="rounded-bl-full" width="w-48" height="h-72" position={'right'}>
 	<Navigation />
 </Drawer>
 <!-- App Shell -->
@@ -36,7 +27,7 @@
 		<AppBar background="bg-surface-700/5 dark:bg-surface-200/5" regionRowMain="text-center">
 			<svelte:fragment slot="lead">
 				<div class="flex items-center">
-					<a href="/" class="lg:hidden">
+					<a href="/how-to?step=0" class="lg:hidden">
 						<InkBottle size={36} classes={'text-primary-400 mx-auto'} />
 					</a>
 				</div>

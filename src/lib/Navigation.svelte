@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { drawerStore, LightSwitch } from '@skeletonlabs/skeleton';
+	import { drawerStore } from '@skeletonlabs/skeleton';
 	import { page } from '$app/stores';
 	import InkBottle from '$lib/InkBottle.svelte';
 
@@ -33,7 +33,7 @@
 </script>
 
 <nav class="list-nav p-4">
-	<ul class={horiz ? 'horiz-list' : ''}>
+	<ul class={horiz ? 'horiz-list' : 'flex flex-col items-end'}>
 		{#each links as { href, label }}
 			<li>
 				<a {href} on:click={drawerClose} class={classesActive(href)}
@@ -44,8 +44,5 @@
 				>
 			</li>
 		{/each}
-		<div class={horiz ? 'inline-block py-2' : 'py-2 px-4 text-center w-full'}>
-			<LightSwitch />
-		</div>
 	</ul>
 </nav>

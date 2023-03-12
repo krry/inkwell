@@ -5,27 +5,28 @@
 <div
 	class="grid grid-flow-row md:grid-cols-2 md:grid-rows-2 grid-rows-4 gap-8 lg:gap-16 relative text-center lg:mt-8"
 >
-	<div class="quadrant-card card card-hover variant-glass-warning">
+	<a href="/how-to?step=1" class="quadrant-card card card-hover variant-glass-warning">
 		<h2 class="quadrant-prompt card-header unstyled">Free what's stuck</h2>
 		<div class="text-4xl badge-icon self-center -scale-x-100 mt-4">🌬️</div>
 		<p class="p-4">Write the word that is stuck in your mind. Leave it behind, adorned.</p>
-	</div>
-	<div class="quadrant-card card card-hover variant-glass-surface">
+	</a>
+	<a href="/how-to?step=2" class="quadrant-card card card-hover variant-glass-surface">
 		<h2 class="quadrant-prompt card-header unstyled">Face your feels</h2>
 		<div class="text-4xl badge-icon self-center">🌊</div>
 		<p class="p-4">Draw a face that feels like you feel.</p>
-	</div>
-	<div class="quadrant-card card card-hover variant-glass-success">
+	</a>
+	<a href="/how-to?step=3" class="quadrant-card card card-hover variant-glass-success">
 		<h2 class="quadrant-prompt card-header unstyled">Greet your need</h2>
 		<div class="text-4xl badge-icon self-center">🕳️</div>
 		<p class="p-4">Draw the empty shape of your unmet need. Then fill it in.</p>
-	</div>
-	<div class="quadrant-card card card-hover variant-glass-error">
+	</a>
+	<a href="/how-to?step=4" class="quadrant-card card card-hover variant-glass-error">
 		<h2 class="quadrant-prompt card-header unstyled">Burn your burden</h2>
 		<div class="text-4xl badge-icon self-center mt-4">🔥</div>
 		<p class="p-4">Draw whatever is weighing you down … on fire.</p>
-	</div>
-	<div
+	</a>
+	<a
+		href="/how-to?step=5"
 		class="card card-hover md:absolute bg-primary-300-500-token z-1 opacity-75 hover:z-10 hover:opacity-100 cursor-default inset-0 m-auto rounded-full h-64 w-64 flex flex-col justify-center items-center border-2 border-secondary-200 dark:border-secondary-700 transition-opacity duration-300 ease-in-out reveal-link-on-focus"
 	>
 		<InkBottle size={64} classes={'text-secondary-400 -mt-16'} />
@@ -57,5 +58,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</a>
 </div>

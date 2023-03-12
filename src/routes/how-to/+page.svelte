@@ -1,10 +1,18 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import { Stepper, Step } from '@skeletonlabs/skeleton';
+	const stepParam = $page.url.searchParams.get('step');
+	export let startOnStep = stepParam ? +stepParam : 0;
 </script>
 
 <h1 class="gradient-heading font-extrabold">How to Ink Well</h1>
-<Stepper on:complete={() => goto('/')} buttonBackLabel="← Back" buttonNextLabel="Continue →">
+<Stepper
+	on:complete={() => goto('/')}
+	buttonBackLabel="← Back"
+	buttonNextLabel="Continue →"
+	start={startOnStep}
+>
 	<Step class="prose lg:prose-lg">
 		<svelte:fragment slot="header">
 			<h3 class="gradient-heading mt-8">Now we bring our focus to breathing.</h3>
