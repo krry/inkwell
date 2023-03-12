@@ -1,0 +1,61 @@
+/*place global styles here */
+html,
+body {
+	@apply h-full overflow-hidden;
+}
+
+.dark .prose :where(strong):not(:where([class~='not-prose'] *)) {
+	--tw-prose-bold: var(--tw-prose-invert-bold);
+}
+
+.gradient-heading {
+	@apply bg-clip-text text-transparent box-decoration-clone;
+	/* Direction */
+	@apply bg-gradient-to-br;
+	/* Color Stops */
+	@apply from-tertiary-500 dark:from-secondary-400 via-primary-500 dark:via-primary-400 to-secondary-500 dark:to-tertiary-400;
+}
+
+.quadrant-card {
+	/* within */
+	@apply flex flex-col justify-between cursor-default;
+	/* around */
+	@apply card card-hover py-6 px-8 border-2 border-transparent z-10;
+}
+
+.quadrant-card:hover {
+	@apply border-secondary-200 dark:border-secondary-700;
+}
+
+.quadrant-card.air {
+	@apply variant-glass-warning;
+}
+
+.quadrant-card.water {
+	@apply variant-glass-surface;
+}
+
+.quadrant-card.earth {
+	@apply variant-glass-success;
+}
+
+.quadrant-card.fire {
+	@apply variant-glass-error;
+}
+
+.quadrant-prompt {
+	@apply card-header text-3xl sm:text-4xl;
+}
+
+.reveal-link-on-focus:focus .hidden-link,
+.reveal-link-on-focus:hover .hidden-link {
+	@apply opacity-100;
+}
+
+.horiz-list {
+	@apply flex justify-evenly flex-wrap;
+}
+
+.prose {
+	@apply text-surface-800 dark:text-surface-200;
+}
