@@ -1,4 +1,4 @@
-<div class="prose prose-xl text-surface-800 dark:text-surface-300">
+<div class="prose lg:prose-lg xl:prose-xl text-surface-800 dark:text-surface-300">
 	<h1 class="gradient-heading font-extrabold">Draw It Yrself</h1>
 	<div class="italic font-bold text-2xl">It's your shadow. Draw it out however you like.</div>
 	<h2 class="gradient-heading">How to Set Up for Ink Well</h2>
