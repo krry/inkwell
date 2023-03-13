@@ -20,7 +20,7 @@
 	<h3 class="gradient-heading">Ways to practice</h3>
 </div>
 <ul class="list prosy">
-	<li>
+	<li class="list-option cursor-default">
 		<span>
 			<!-- ipad tablet glyph -->
 			<svg
@@ -53,7 +53,7 @@
 			</span>
 		</span>
 	</li>
-	<li>
+	<li class="list-option cursor-default">
 		<span>
 			<!-- printer glyph -->
 			<svg
@@ -83,7 +83,7 @@
 			</span>
 		</span>
 	</li>
-	<li>
+	<li class="list-option cursor-default">
 		<span>
 			<!-- pen and paper glyph -->
 			<svg
@@ -111,7 +111,7 @@
 			</span>
 		</span>
 	</li>
-	<li>
+	<li class="list-option cursor-default">
 		<span>
 			<!-- earth glyph -->
 			<svg
