@@ -95,7 +95,7 @@
 		</p>
 		<p>
 			Here we recklessly sketch our burden. Then we surround it with a ring of rocks, and arrange
-			enough tinder, kindling, and fuel, to burn this burden up, figuratively speaking.
+			enough tinder, kindling, and fuel to burn this burden up, figuratively speaking.
 		</p>
 		<blockquote>
 			<p>Where does this boundary belong? To what best we agree?</p>
