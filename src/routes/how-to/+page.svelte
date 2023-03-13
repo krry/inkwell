@@ -6,14 +6,15 @@
 	export let startOnStep = stepParam ? +stepParam : 0;
 </script>
 
-<h1 class="gradient-heading font-extrabold">How to Ink Well</h1>
+<h1 class="gradient-heading font-extrabold max-w-2xl mx-auto">How to Ink Well</h1>
 <Stepper
 	on:complete={() => goto('/')}
 	buttonBackLabel="← Back"
 	buttonNextLabel="Continue →"
 	start={startOnStep}
+	class="max-w-2xl mx-auto"
 >
-	<Step class="prose lg:prose-lg">
+	<Step class="prose lg:prose-lg xl:prose-xl">
 		<svelte:fragment slot="header">
 			<h3 class="gradient-heading mt-8">Now we bring our focus to breathing.</h3>
 		</svelte:fragment>
@@ -43,7 +44,9 @@
 			Reducing this thought to a word, we write it in the upper right, the active, ethereal realm of
 			Air, thought and language.
 		</p>
-		<blockquote><p>Why do I repeat this thought so much? Where did it come from?</p></blockquote>
+		<blockquote>
+			<p>Why do I repeat this thought so much? Where did it come from?</p>
+		</blockquote>
 		<p>We decorate and adorn that stuck thought until we are ready to leave it on the canvas.</p>
 	</Step>
 	<Step class="prose lg:prose-lg xl:prose-xl">

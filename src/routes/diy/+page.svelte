@@ -1,4 +1,4 @@
-<div class="prose lg:prose-lg xl:prose-xl text-surface-800 dark:text-surface-300">
+<div class="mx-auto prose lg:prose-lg xl:prose-xl text-surface-800 dark:text-surface-300">
 	<h1 class="gradient-heading font-extrabold">Draw It Yrself</h1>
 	<div class="italic font-bold text-2xl">It's your shadow. Draw it out however you like.</div>
 	<h2 class="gradient-heading">How to Set Up for Ink Well</h2>
@@ -64,12 +64,12 @@
 						<tr>
 							<th class="text-secondary-700 dark:text-secondary-200">Ethereal</th>
 							<td
-								><span class="text-2xl font-bold text-surface-500 dark:text-surface-400"
+								><span class="text-xl lg:text-2xl font-bold text-surface-500 dark:text-surface-400"
 									>🌊 Water</span
 								></td
 							>
 							<td
-								><span class="text-2xl font-bold text-warning-500 dark:text-warning-400"
+								><span class="text-xl lg:text-2xl font-bold text-warning-500 dark:text-warning-400"
 									>🌬️ Air</span
 								></td
 							>
@@ -77,12 +77,13 @@
 						<tr>
 							<th class="text-primary-700 dark:text-primary-200">Material</th>
 							<td
-								><span class="text-2xl font-bold text-success-500 dark:text-success-400"
+								><span class="text-xl lg:text-2xl font-bold text-success-500 dark:text-success-400"
 									>🪱 Earth</span
 								></td
 							>
 							<td
-								><span class="text-2xl font-bold text-primary-500 dark:text-error-400">🔥 Fire</span
+								><span class="text-xl lg:text-2xl font-bold text-primary-500 dark:text-error-400"
+									>🔥 Fire</span
 								></td
 							>
 						</tr>
