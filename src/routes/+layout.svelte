@@ -8,7 +8,8 @@
 	import Navigation from '$lib/comps/Navigation.svelte';
 	import InkBottle from '$lib/assets/InkBottle.svelte';
 
-	const onHomepage = $page.url.pathname === '/';
+	$: onHomepage = $page.url.pathname === '/';
+
 	function drawerOpen(): void {
 		drawerStore.open({});
 	}
