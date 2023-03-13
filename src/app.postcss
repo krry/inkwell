@@ -11,6 +11,10 @@ body {
 	--tw-prose-bold: var(--tw-prose-invert-bold);
 }
 
+.dark .prose :where(blockquote):not(:where([class~='not-prose'] *)) {
+	--tw-prose-quotes: var(--tw-prose-invert-quotes);
+}
+
 .gradient-heading {
 	@apply bg-clip-text text-transparent box-decoration-clone;
 	/* Direction */
@@ -24,10 +28,6 @@ body {
 	@apply flex flex-col justify-between cursor-default;
 	/* around */
 	@apply py-6 px-8 border-2 border-transparent z-10;
-}
-
-.quadrant-card:hover {
-	@apply border-secondary-200 dark:border-secondary-700;
 }
 
 .quadrant-prompt {

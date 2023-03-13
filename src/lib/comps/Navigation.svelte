@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { drawerStore } from '@skeletonlabs/skeleton';
 	import { page } from '$app/stores';
-	import InkBottle from '$lib/InkBottle.svelte';
+	import InkBottle from '$lib/assets/InkBottle.svelte';
 
 	function drawerClose(): void {
 		drawerStore.close();
@@ -15,16 +15,16 @@
 			label: 'Home'
 		},
 		{
+			href: '/setup',
+			label: 'Setup'
+		},
+		{
+			href: '/ritual',
+			label: 'The Ritual'
+		},
+		{
 			href: '/about',
 			label: 'About'
-		},
-		{
-			href: '/how-to',
-			label: 'How to Ink Well'
-		},
-		{
-			href: '/diy',
-			label: 'D.I.Y.'
 		}
 	];
 

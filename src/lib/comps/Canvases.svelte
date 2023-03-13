@@ -1,5 +1,5 @@
-<h2 class="gradient-heading">Ink Well Methods</h2>
-<ul class="list prosy" id="methods">
+<h2 class="gradient-heading">Canvases</h2>
+<ul class="list not-prose" id="canvases">
 	<li class="list-option cursor-default">
 		<span>
 			<!-- ipad tablet glyph -->
@@ -55,9 +55,9 @@
 			<span class="flex flex-wrap">
 				<span class="mr-1">
 					<span>Print the template</span>
-					(<a href="/inkwell-template.pdf" download>pdf</a>
+					(<a href="/inkwell-template.pdf" download>PDF</a>
 					|
-					<a href="/inkwell-template.png" download>png</a>)
+					<a href="/inkwell-template.jpg" download>JPEG</a>)
 				</span>
 				<span>and use your art supplies</span>
 			</span>
@@ -84,7 +84,7 @@
 		<span class="flex-auto">
 			<span class="flex flex-wrap">
 				<span>
-					<a href="/diy">D.I.Y.</a>
+					<a href="/setup#diy">D.I.Y.</a>
 					→
 					<span>Draw It Yourself</span>
 				</span>

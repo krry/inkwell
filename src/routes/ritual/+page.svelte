@@ -1,38 +1,53 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
 	import { Stepper, Step, localStorageStore } from '@skeletonlabs/skeleton';
+	import { debug } from 'svelte/internal';
 	const stepParam = $page.url.searchParams.get('step');
 	export let startOnStep = stepParam ? +stepParam : 0;
 	const remindedAboutMethod = localStorageStore('remindedAboutMethod', false);
+	let hasAdvanced = false;
+	export function checkStep(event: CustomEvent) {
+		console.log('state', event.detail.state.current);
+		if (event.detail.state.current > 0) {
+			hasAdvanced = true;
+		}
+	}
 </script>
 
-<h1 class="gradient-heading font-extrabold max-w-2xl mx-auto">How to Ink Well</h1>
+{#if !hasAdvanced}<h1
+		class="gradient-heading font-extrabold max-w-2xl mx-auto text-center mb-12"
+		transition:fade|local={{ duration: 200 }}
+	>
+		The Ritual
+	</h1>{/if}
 {#if !$remindedAboutMethod}
 	<aside
-		class="alert variant-ghost-warning flex flex-col justify-center items-center !mb-12"
+		class="alert variant-ghost-primary mx-auto lg:max-w-lg"
 		transition:fade|local={{ duration: 200 }}
 	>
 		<div class="alert-message">
-			<h3>Do you have a template ready?</h3>
+			<h3>Have you <a href="/setup">set up</a> a canvas?</h3>
 		</div>
 		<div class="alert-actions">
 			<button
 				type="button"
-				class="btn variant-ghost-primary"
+				class="btn variant-filled-success"
 				on:click={() => remindedAboutMethod.set(true)}>Yes</button
 			>
 			<button
 				type="button"
-				class="btn variant-filled-secondary"
-				on:click={() => goto('/about#methods')}>Huh?</button
+				class="btn variant-filled-primary"
+				on:click={() => goto('/setup#canvases')}>Huh?</button
 			>
 		</div>
 	</aside>
 {/if}
 <Stepper
 	on:complete={() => goto('/')}
+	on:next={checkStep}
+	on:back={checkStep}
 	buttonBackLabel="← Back"
 	buttonNextLabel="Continue →"
 	start={startOnStep}
@@ -40,14 +55,16 @@
 >
 	<Step class="prose lg:prose-lg xl:prose-xl">
 		<svelte:fragment slot="header">
-			<h3 class="gradient-heading mt-8">Now we bring our focus to breathing.</h3>
+			<h3 class="gradient-heading">Bring your focus to breathing…</h3>
 		</svelte:fragment>
-		<ol>
-			<li>First, exhaling fully</li>
-			<li>pausing for a beat</li>
-			<li>inhaling slowly</li>
-			<li>pausing again</li>
-		</ol>
+		<ul class="list not-prose">
+			<li class="list-option text-xl"><span>💨</span><span>first, exhaling fully</span></li>
+			<li class="list-option text-xl"><span>😐</span><span>pausing for a beat</span></li>
+			<li class="list-option text-xl">
+				<span class="-scale-x-100">💨</span><span>inhaling slowly</span>
+			</li>
+			<li class="list-option text-xl"><span>😐</span><span>pausing again</span></li>
+		</ul>
 		<p>
 			As we find an easy rhythm, emptying from the center out, refilling from every direction toward
 			the center, <em

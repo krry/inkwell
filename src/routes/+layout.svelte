@@ -1,11 +1,14 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import '@skeletonlabs/skeleton/themes/theme-modern.css';
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
 	import { AppShell, AppBar, autoModeWatcher, Drawer, drawerStore } from '@skeletonlabs/skeleton';
-	import Navigation from '$lib/Navigation.svelte';
-	import InkBottle from '$lib/InkBottle.svelte';
+	import Navigation from '$lib/comps/Navigation.svelte';
+	import InkBottle from '$lib/assets/InkBottle.svelte';
 
+	const onHomepage = $page.url.pathname === '/';
 	function drawerOpen(): void {
 		drawerStore.open({});
 	}
@@ -14,7 +17,7 @@
 <svelte:head>
 	{@html `<script>${autoModeWatcher.toString()} autoModeWatcher();</script>`}
 </svelte:head>
-<Drawer rounded="rounded-bl-full" width="w-48" height="h-72" position={'right'}>
+<Drawer rounded="rounded-bl-full" width="w-48" height="h-80" position={'right'}>
 	<Navigation />
 </Drawer>
 <!-- App Shell -->
@@ -27,9 +30,9 @@
 		<AppBar background="bg-surface-700/5 dark:bg-surface-200/5" regionRowMain="text-center">
 			<svelte:fragment slot="lead">
 				<div class="flex items-center">
-					<a href="/how-to?step=0" class="lg:hidden">
+					<button class="badge-icon lg:hidden" on:click={() => goto('/ritual?step=0')}>
 						<InkBottle size={36} classes={'text-primary-400 mx-auto'} />
-					</a>
+					</button>
 				</div>
 			</svelte:fragment>
 			<svelte:fragment slot="default">
@@ -57,9 +60,11 @@
 	<svelte:fragment slot="sidebarRight">
 		<!-- <RightSidebar /> -->
 	</svelte:fragment>
-	<div class="container mx-auto p-8 space-y-8">
+	<div class="container mx-auto p-8 lg:p-12 space-y-8" class:lg:pt-0={onHomepage}>
 		<slot />
 	</div>
+	<svelte:fragment slot="pageFooter" />
+
 	<svelte:fragment slot="footer">
 		<Navigation horiz />
 		<!-- <Footer /> -->
