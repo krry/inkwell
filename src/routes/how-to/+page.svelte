@@ -1,12 +1,36 @@
 <script>
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { Stepper, Step } from '@skeletonlabs/skeleton';
+	import { fade } from 'svelte/transition';
+	import { Stepper, Step, localStorageStore } from '@skeletonlabs/skeleton';
 	const stepParam = $page.url.searchParams.get('step');
 	export let startOnStep = stepParam ? +stepParam : 0;
+	const remindedAboutMethod = localStorageStore('remindedAboutMethod', false);
 </script>
 
 <h1 class="gradient-heading font-extrabold max-w-2xl mx-auto">How to Ink Well</h1>
+{#if !$remindedAboutMethod}
+	<aside
+		class="alert variant-ghost-warning flex flex-col justify-center items-center !mb-12"
+		transition:fade|local={{ duration: 200 }}
+	>
+		<div class="alert-message">
+			<h3>Do you have a template ready?</h3>
+		</div>
+		<div class="alert-actions">
+			<button
+				type="button"
+				class="btn variant-ghost-primary"
+				on:click={() => remindedAboutMethod.set(true)}>Yes</button
+			>
+			<button
+				type="button"
+				class="btn variant-filled-secondary"
+				on:click={() => goto('/about#methods')}>Huh?</button
+			>
+		</div>
+	</aside>
+{/if}
 <Stepper
 	on:complete={() => goto('/')}
 	buttonBackLabel="← Back"
