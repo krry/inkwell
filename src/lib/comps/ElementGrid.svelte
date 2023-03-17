@@ -1,5 +1,5 @@
 <div
-	class="grid grid-flow-row md:grid-cols-2 md:grid-rows-2 grid-rows-4 gap-8 lg:gap-16 text-center lg:mt-8 pb-14 relative"
+	class="grid grid-flow-row md:grid-cols-2 md:grid-rows-2 grid-rows-4 gap-8 lg:gap-16 text-center lg:mt-8 pb-14 relative snap-start"
 >
 	<a
 		href="/ritual?step=1"

@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="text-center m-auto lg:h-[77vh] flex justify-center items-center relative mb-24 lg:mb-48"
+	class="text-center m-auto lg:h-[77vh] flex justify-center items-center relative mb-24 lg:mb-48 snap-start"
 >
 	<a
 		href="/ritual?step=0"
