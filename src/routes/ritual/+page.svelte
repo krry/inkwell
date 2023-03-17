@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { localStorageStore, Step, Stepper } from '@skeletonlabs/skeleton';
 	import { fade } from 'svelte/transition';
-	import { Stepper, Step, localStorageStore } from '@skeletonlabs/skeleton';
-	import { debug } from 'svelte/internal';
 	const stepParam = $page.url.searchParams.get('step');
 	export let startOnStep = stepParam ? +stepParam : 0;
 	const remindedAboutMethod = localStorageStore('remindedAboutMethod', false);
@@ -85,10 +84,17 @@
 			Reducing this thought to a word, we write it in the upper right, the active, ethereal realm of
 			Air, thought and language.
 		</p>
+		<p>
+			We commit this worn thought to the canvas, to dry up, to die. For writing is a process of
+			sacrifice as ideas that live within us become static and still.
+		</p>
 		<blockquote>
 			<p>Why do I repeat this thought so much? Where did it come from?</p>
 		</blockquote>
-		<p>We decorate and adorn that stuck thought until we are ready to leave it on the canvas.</p>
+		<p>
+			We waft over this word, allowing the winds of change to brush it away. Then we evolve to the
+			left.
+		</p>
 	</Step>
 	<Step class="prose lg:prose-lg xl:prose-xl">
 		<svelte:fragment slot="header">
@@ -104,22 +110,25 @@
 			resemblances.
 		</p>
 		<blockquote>
-			<p>What does this face say to me? How is it hurting?</p>
+			<p>What does this face say to me? How is it hurting? How is it glowing?</p>
 		</blockquote>
-		<p>When we have made ourself feel seen and heard, we continue.</p>
+		<p>
+			With our hand, we wash our face with ink and grace. When we have made ourself feel seen and
+			heard, we continue.
+		</p>
 	</Step>
 	<Step class="prose lg:prose-lg xl:prose-xl">
 		<svelte:fragment slot="header">
 			<h3 class="gradient-heading mt-8">What unmet need am I suffering?</h3>
 		</svelte:fragment>
 		<p>
-			Tracing our negative emotions back to their roots, we may find unmet needs. As we examine
-			those zones of suffering, we lower our gaze to the bottom left quadrant, the receptive,
-			material realm of Earth, needs and resources.
+			Tracing our buried emotions back to their roots, we may find unmet needs. As we examine those
+			zones of suffering, we lower our gaze to the bottom left quadrant, the receptive, material
+			realm of Earth, needs and resources.
 		</p>
 		<p>
-			Here we draw an empty space shaped like what we are missing, and as we watch our hand
-			decorating the space around it, we may see this story of scarcity from a new angle.
+			Here we draw an empty space shaped like what we are missing, and as we observe our hand
+			digging this hole, we may see this story of scarcity in a new light.
 		</p>
 		<blockquote><p>Why is this need unmet? How could I fill it myself?</p></blockquote>
 		<p>When the emptiness starts to subside, we continue.</p>
