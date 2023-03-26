@@ -1,7 +1,7 @@
 <h2 class="gradient-heading mb-4 snap-start">Why We Ink Well</h2>
 <div class="text-surface-700-200-token">
 	<!-- prettier-ignore -->
-	<p class="whitespace-pre-line">
+	<p class="whitespace-pre-line font-medium">
 		<strong>Deep within us there sits a well.</strong>
 		A well without a bottom the well of being, some say.
 
@@ -31,8 +31,8 @@
 
 		The inky syrup of fear lurks murky,
 		coating love's bubbles
-		in the film of appearance,
-		in the scum of image.
+		in scum and film,
+		image and appearance.
 
 		To bring purer forms of love into the world,
 		we must first draw out our shadow.
