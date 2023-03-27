@@ -3,7 +3,8 @@
 	<!-- prettier-ignore -->
 	<p class="whitespace-pre-line font-medium">
 		<strong>Deep within us there sits a well.</strong>
-		A well without a bottom the well of being, some say.
+		A well without a bottom
+  the well of being, some say.
 
 		Diving in, we begin to fathom the Source
 		from whence raw love bubbles forth.
