@@ -17,10 +17,20 @@
 
 <svelte:head>
 	{@html `<script>${autoModeWatcher.toString()} autoModeWatcher();</script>`}
+	<script src="https://kerry.ink/widgets/webring/webring.wc.js"></script>
 </svelte:head>
 <Drawer rounded="rounded-bl-full" width="w-48" height="h-80" position={'right'}>
 	<Navigation />
 </Drawer>
+
+<!-- Webring Widget (Center Right) -->
+<webring-widget 
+	data-source="https://kerry.ink/widgets/webring/webring.json"
+	mode="compact" 
+	theme="auto"
+	style="position: fixed; top: 50%; right: 2rem; transform: translateY(-50%); max-width: 320px; z-index: 1000;"
+></webring-widget>
+
 <!-- App Shell -->
 <AppShell
 	slotSidebarLeft="bg-surface-500/5 w-0 lg:w-56"
