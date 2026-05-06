@@ -1,43 +1,53 @@
-<h2 class="gradient-heading mb-4 snap-start">Why We Ink Well</h2>
+<h2 class="gradient-heading mb-4 snap-start">Why Ink Well</h2>
 <div class="text-surface-700-200-token">
 	<!-- prettier-ignore -->
 	<p class="whitespace-pre-line font-medium">
-		<strong>Deep within us there sits a well.</strong>
-		A well without a bottom
-  the well of being, some say.
+		<b>Deep within there sits a well</b><br/>
+		well without bottom,
+	  well-being waiting.
 
-		Diving in, we begin to fathom the Source
-		from whence raw love bubbles forth.
-		A foamy froth forms on the surface.
+		Falling in, we fathom Source
+		finding wonder bubbles forth.
+		Foamy froth on surface forms.
+		Bubbles burst in grief and mirth.
 
-		With our two tools, attention and intent,
-		we shape the foam of love.
+		Intent, aware,
+		we do the work
+		form the formless,
+		sculpting earth.
+		
+		Chaos in cosmos,
+		foam in formation,
+		sharing the mystery,
+		dreaming creation.
 
-		When the foam is in-formation,
-		we are ready to share our creation.
+		Presents or presence,
+		dancesteps or service,
+		hugs or sweet nothings,
+		even true love can hurt.
 
-		We share the love we shape
-		through words and deeds,
-		movement and speech.
+		Our best intents
+		may hide a taint,
+		by force unseen
+		mangled, stained.
 
-		But the love we seek to share
-		often comes with a taint.
-		We witness our best intentions
-		mangled and stained
-		by some unseen force.
+		Down the cave wall
+		and into the well,
+		shadows seep silently;
+		insight will fail.
 
-		For in that well of being,
-		our shadow pools unseen,
-		trickling down behind the mind's eye.
-
-		The inky syrup of fear lurks murky,
-		coating love's bubbles
+		Fear's inky syrup
+	  a bubble may pop.
+	  As foam we form up,
+	  here to play non-stop
 		in scum and film,
-		image and appearance.
+		in song and in paint,
+		as image, appearance,
+		or vulnerable pain.
 
-		To bring purer forms of love into the world,
-		we must first draw out our shadow.
-
-		<strong>May as well use the ink well…</strong>
+		To pour our pure love
+		from the depth of the well,
+		we must first draw the shadow.
+		<br/><b>May we use the ink well…</b>
 	</p>
 </div>
