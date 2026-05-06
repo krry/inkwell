@@ -7,6 +7,13 @@ export default defineConfig({
 	build: {
 		cssMinify: 'esbuild'
 	},
+	environments: {
+		ssr: {
+			build: {
+				cssMinify: 'esbuild'
+			}
+		}
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}
