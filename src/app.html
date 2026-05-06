@@ -7,6 +7,16 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-title" content="Inkwell" />
 		<meta name="viewport" content="width=device-width" />
+		<script>
+			(function() {
+				const mql = window.matchMedia('(prefers-color-scheme: light)');
+				function setMode(v) {
+					v ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark');
+				}
+				setMode(mql.matches);
+				mql.onchange = () => setMode(mql.matches);
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-theme="modern">

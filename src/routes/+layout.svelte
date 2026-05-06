@@ -1,35 +1,35 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import '@skeletonlabs/skeleton/themes/theme-modern.css';
-	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
-	import { AppShell, AppBar, autoModeWatcher, Drawer, drawerStore } from '@skeletonlabs/skeleton';
+	import {
+		AppShell,
+		AppBar,
+		Drawer,
+		initializeStores,
+		getDrawerStore
+	} from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/comps/Navigation.svelte';
 	import InkBottle from '$lib/assets/InkBottle.svelte';
+
+	initializeStores();
+	const drawerStore = getDrawerStore();
 
 	$: onHomepage = $page.url.pathname === '/';
 
 	function drawerOpen(): void {
-		drawerStore.open({});
+		drawerStore.open({ id: 'nav', width: 'w-48', height: 'h-80', position: 'right', rounded: 'rounded-bl-full' });
 	}
 </script>
 
 <svelte:head>
-	{@html `<script>${autoModeWatcher.toString()} autoModeWatcher();</script>`}
 	<script src="https://kerry.ink/widgets/webring/webring.wc.js"></script>
 </svelte:head>
-<Drawer rounded="rounded-bl-full" width="w-48" height="h-80" position={'right'}>
-	<Navigation />
+<Drawer>
+	{#if $drawerStore.id === 'nav'}
+		<Navigation />
+	{/if}
 </Drawer>
-
-<!-- Webring Widget (Center Right) -->
-<webring-widget 
-	data-source="https://kerry.ink/widgets/webring/webring.json"
-	mode="compact" 
-	theme="auto"
-	style="position: fixed; top: 50%; right: 2rem; transform: translateY(-50%); max-width: 320px; z-index: 1000;"
-></webring-widget>
 
 <!-- App Shell -->
 <AppShell
@@ -53,7 +53,7 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<div class="flex items-center">
-					<button class="lg:hidden btn btn-sm mr-1" on:click={drawerOpen}>
+					<button class="lg:hidden btn btn-sm mr-1" on:click={drawerOpen} aria-label="Open navigation">
 						<span>
 							<svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
 								<rect width="96" height="16" />
@@ -81,3 +81,10 @@
 		<!-- <Footer /> -->
 	</svelte:fragment>
 </AppShell>
+
+<webring-widget
+	data-source="https://kerry.ink/widgets/webring/webring.json"
+	mode="compact"
+	theme="auto"
+	style="position: fixed; bottom: 2rem; right: 2rem; max-width: 320px; z-index: 1000;"
+></webring-widget>
